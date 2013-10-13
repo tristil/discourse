@@ -148,6 +148,7 @@ gem 'therubyracer'
 gem 'thin', require: false
 gem 'highline', require: false
 gem 'rack-protection' # security
+gem 'dotenv-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -226,4 +227,10 @@ group :profile do
   #
   # if you need to profile, uncomment out this line
   # gem 'rack-perftools_profiler', require: 'rack/perftools_profiler', platform: :mri_19
+end
+
+group :deploy do
+  gem 'capistrano', '~> 2.15.5'
+  gem 'capistrano-unicorn'
+  gem 'turbo-sprockets-rails3'
 end
